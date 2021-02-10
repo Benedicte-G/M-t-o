@@ -1,91 +1,82 @@
 <!DOCTYPE html>
 <html>
         
-        <head>
-          <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
         <title>Météo du monde</title>
-        <style> 
-           h1{ 
-               background-color:brown
-             }           
-            
-             h1{ 
-               color:azure
-             }  
-            
-           h1 { text-align: center
-            } 
+           
+        <link rel="stylesheet" href="meteo.css">
+          
+	</head>
+           
     
-            
-             .flex { display: flex;
-                justify-content: space-between;
-            }
-            
-            .cont-item{
-                background-color: cornsilk;
-                border: 1px solid #000; 
-            }
-                
-             .cont-item1{
-                background-color: lavender;
-                border: 1px solid #000; 
-            }
-            
-            strong{
-                color: brown;
-            }
-        </style>        
-                           
-        </head>
-                           
-        <body>
-            <h1>TP Météo HTML</h1> 
-               
-            <div class="flex">
-            <div class="cont-item"> 
+	<body onload=showCity();>
+		<label for="showCity">Choisir une ville:</label>
+        <select onchange=showCity() id="ville">
+            <option value= "">-- Choisir une option --</option>
+            <option value= "lyon">Lyon</option>
+            <option value= "abidjan">Abidjan</option>
+            <option value= "washington">Washington</option>
+		</select>
+			
+		<h1>TP Météo HTML</h1> 
+		<div class="flex">
+            <div id="lyon" class="cont-item city"> 
                 <h2>Lyon</h2>
+                <h5>(France)</h5> 
+                <img src="https://www.myexpat.fr/wp-content/uploads/panorama-immobilier-lyon.jpeg" class="img"> 
                 <p>lundi 10:00</p>
-                <img src="nuage.png" alt="temps nuageux" width="55"> 
-                <p> 10°, nuageux.</p> 
-                
-                
+				<span class="temp"></span> 
+				<br>
+				<span class="ressentis"></span>  
+				<br>
+				<span class="tempMin"></span> - <span class="tempMax"></span> 
+				<br>
+				<span class="humidity"></span>
+				<br>
+                <span class="cloud"></span>  
             </div>
-                                                                                        
-            
-            
-            <div class="cont-item"> 
-                <h2>Abidjan</h2> 
+            <div id="abidjan" class="cont-item city"> 
+                <h2>Abidjan</h2>
+                <h5>(Côte d'ivoire)</h5> 
+                <img src="https://www.alwihdainfo.com/photo/art/grande/49594449-38531523.jpg?v=1599350847" alt="temps ensoleillé" class="img">
                 <p>lundi 10:00</p>
-                <img src="soleil.png" alt="temps ensoleillé" width="40"> 
-                <p> 32°, ensoleillé.</p> 
-                
-                                         
+                <span class="temp"></span> 
+				<br>
+				<span class="ressentis"></span>  
+				<br>
+				<span class="tempMin"></span> - <span class="tempMax"></span> 
+				<br>
+				<span class="humidity"></span>
+				<br>
+                <span class="cloud"></span>  				
             </div> 
-                                  
-            
-            
-            <div class="cont-item"> 
-                <h2>New York</h2> 
+            <div id="washington" class="cont-item city"> 
+                <h2>Washington</h2> 
+                <h5>(Etats-Unis)</h5> 
+                 <img src="https://lh3.googleusercontent.com/proxy/-1uwkK4lIMEzioK5YxsDcuupgHoRZ-oOW_tAcWvHeMmy5GyUJz6wlyW8x-Mz64NV11OzdDzlWr4ZnClGaD8ymvonGoMLlgJ-lhCq3fqHuXWwRinbJmowzZxFWRMUIH5VI2I6lSQWYHja822g" alt="temps pluvieux" class="img">
                 <p>lundi 10:00</p>
-                <img src="pluie.png" alt="temps pluvieux" width="40"> 
-                <p> -7°, pluivieux.</p>
-              
-                
-            </div> 
+				<span class="temp"></span> 
+				<br>
+				<span class="ressentis"></span>  
+				<br>
+				<span class="tempMin"></span> - <span class="tempMax"></span> 
+				<br>
+				<span class="humidity"></span>
+				<br>
+                <span class="cloud"></span>
+         
+                 </div>
             
-            <div class="cont-item1">
-               
-            <footer>
+		</div>
+				
+	</body>
+    <script src="meteo.js"> </script>
+              <footer>
+				<div class="finn">
                 <p>Bénédicte GNANGORAN</p>
                 <p>Icône météo par <strong><em>Noun project</em></strong></p>
-            </footer>
-            </div>
-                
-            </div>
-            
-                                                                                                        
-        </body>
-            
-            
-         
+                </div>
+			</footer>
+    
 </html>
