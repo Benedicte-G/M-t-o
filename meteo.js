@@ -13,7 +13,7 @@ function getWeather(ville){
 			
 				  }
 				};
-				xhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?q="+ville.id+"&appid=bc9152f15f618348dc2ac5248b7b86e3&units=metric&lang=fr", true);
+				xhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q="+ville.id+"&appid=bc9152f15f618348dc2ac5248b7b86e3&units=metric&lang=fr", true);
 				xhttp.send();
 				
 				return result;
